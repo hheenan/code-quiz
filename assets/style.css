@@ -1,5 +1,18 @@
 button {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+}
+#player-score {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    background-color: yellow;
+}
+#start-quiz {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    background-color: red;
 }
 header {
     font-size: medium;
