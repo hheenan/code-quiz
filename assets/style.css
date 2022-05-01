@@ -1,0 +1,23 @@
+button {
+    display: block;
+}
+header {
+    font-size: medium;
+    background-color: beige;
+    padding: 10px;
+    text-align: center;
+}
+h1 {
+    color: green; 
+   
+}
+h2 {
+    color: royalblue;
+    text-transform: capitalize;
+
+}
+body {
+    font-family: sans-serif;
+    background-color: pink;
+    color: black;
+}
