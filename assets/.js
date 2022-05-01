@@ -15,6 +15,8 @@ function setTime () {
     displayQuestions();
 
 }
+// question title
+let questionDiv = document.getElementById("question-div");
 // div for answers and results
 let answers = document.getElementById("results");
 var choices = documents.getElementById("choices");
