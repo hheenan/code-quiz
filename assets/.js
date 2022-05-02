@@ -51,7 +51,56 @@ var myQuestions = [
     {
         question: "What is the purpose of an empty array?",
         answers: {
-            
+            a:'to output a value of zero',
+            b:'an empty array is ineffecient',
+            c:'to correct errors on the array',
+            d:'improve a programs performance',
+        },
+    correctAnswer: 'd, improve a programs performance ex. memory access'
+    },
+    {
+        question: "What is JavaScript?",
+        answers: {
+            a:'a single roast origin coffee',
+            b:'the same thing as Java',
+            c:'client-side scripting language',
+            d:'object-based programming language'
+        },
+    correctAnswer: 'd, object-based programming. client and server side language'
+    },
+    {
+        question:"Which software company developed JavaScript?",
+        answers: {
+            a: 'Facebook',
+            b: 'Tesla',
+            c: 'Netscape',
+            d: 'Twitter',
+        },
+    correctAnswer: 'c, Netscape'
+    },
+    {
+        question:"Which symbol is used for single line comments in JavaScript?",
+        answers: {
+            a: '$',
+            b: '/*',
+            c: '//',
+            d: '><',
+        },
+    correctAnswer:'c, and /* for multi-line comments */'
+    }
+];
+// store output and answers
+function showQuestions(questions, quizContainer){
+    var output = [];
+    var answers;
+
+    // questions
+    for(var i=0; i<questions.length; i++){
+        // reset list
+        answers = [];
+        // each available answer
+        for(letter in questions[i].answers){
+            // html radio button
         }
     }
-]
+}
