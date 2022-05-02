@@ -109,5 +109,26 @@ function showQuestions(questions, quizContainer){
                 +'</label>'
             );
         }
+    // question and output as answers
+    output.push(
+        '<div class="questions">' + questions[i].question + '</div>'
+        + '<div class ="answers">' + answers.join('') + '</div>'
+    );
     }
+    quizContainer.innerHTML = output.join('');
+}
+
+function showResults(questions, quizContainer, resultsContainer){
+
+    var answerContainers = quiz quizContainer.querySelectorAll('.anwers');
+
+// keeping track of answers
+    var userAnswer = '';
+    var numCorrect = 0;
+
+for(var i=0; i<questions.length; i++){
+
+    // identify select answer
+    userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+}
 }
