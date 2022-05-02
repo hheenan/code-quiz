@@ -101,6 +101,13 @@ function showQuestions(questions, quizContainer){
         // each available answer
         for(letter in questions[i].answers){
             // html radio button
+            answers.push(
+                '<label>'
+                    + '<input type="radio" name="question'+i+'" value="'+letters+'">'
+                    + letter + ': '
+                    + questions[i].answers[letter]
+                +'</label>'
+            );
         }
     }
 }
