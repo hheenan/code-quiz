@@ -15,28 +15,21 @@ function setTime () {
     displayQuestions();
 
 }
-// question title
-let questionDiv = document.getElementById("question-div");
-// div for answers and results
-let answers = document.getElementById("results");
-var choices = documents.getElementById("choices");
-
 // alt styling
-function generateQuiz (questions, quizContainer, resultsContainer, submitButton) {
-    function showQuestions (questions, quizContainer,){
+function generateQuiz (questions, quizContainer, resultsContainer, submitButton){
+    function showQuestions(questions, quizContainer,){
         // code here
     }
-}
 function showResults(questions, quizContainer, resultsContainer){
     // code here
-}
-showQuestions (questions, quizContainer);
+    }
+showQuestions(questions, quizContainer);
 
 // on click show results
-submitButoon.onclick = function(){
+submitButton.onclick = function(){
     showResults(questions, quizContainer, resultsContainer);
+    }
 }
-
 var myQuestions = [
     {
         question: "What is console.log used for in JavaScript?",
@@ -111,16 +104,17 @@ function showQuestions(questions, quizContainer){
         }
     // question and output as answers
     output.push(
-        '<div class="questions">' + questions[i].question + '</div>'
+        '<div class="question">' + questions[i].question + '</div>'
         + '<div class ="answers">' + answers.join('') + '</div>'
-    );
-    }
+            );
+        }
     quizContainer.innerHTML = output.join('');
 }
+showQuestions(questions, quizContainer);
 
 function showResults(questions, quizContainer, resultsContainer){
 
-    var answerContainers = quiz quizContainer.querySelectorAll('.anwers');
+    var answerContainers = quizContainer.querySelectorAll('.answers');
 
 // keeping track of answers
     var userAnswer = '';
@@ -130,5 +124,24 @@ for(var i=0; i<questions.length; i++){
 
     // identify select answer
     userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+
+    // if statement
+    if(userAnswer===questions[i].correctAnswer){
+        numCorrect++;
+    }
+    else{
+        answerContainer[i].style.color = 'red';
+    }
 }
+resultsContainer.innterHTML = numCorrect = ' out of ' + questions.length;
 }
+// show results
+submitButton.onclick = function(){
+    showResults(questions, quizContainer, resultsContainer);
+}
+
+var quizContainer = document.getElementById('question');
+var resultsContainer = document.getElementById('score');
+var submitButton = document.getElementById('submit');
+
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
